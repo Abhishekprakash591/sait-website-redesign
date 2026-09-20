@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 60" width="140" height="60">
+  <rect width="140" height="60" rx="8" fill="#FFFFFF" />
+  <g transform="translate(16, 14)">
+    <!-- Red swirl mark -->
+    <path d="M16,4 C22,4 28,9 28,16 C28,23 22,28 16,28 C9,28 4,23 4,16 C4,9 9,4 16,4 Z" fill="none" stroke="#E53935" stroke-width="3.5" />
+    <path d="M18,21 C22,24 28,30 29,32" stroke="#E53935" stroke-width="3.5" stroke-linecap="round" />
+    <!-- Burst text -->
+    <text x="36" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="22" fill="#1E293B">QBurst</text>
+  </g>
+</svg>

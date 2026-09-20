@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" width="180" height="60">
+  <rect width="100%" height="100%" rx="8" fill="#FFFFFF" />
+  <!-- Colorful TCS monogram symbol -->
+  <g transform="translate(14, 8)">
+    <!-- t -->
+    <path d="M12,10 L24,10 M18,10 L18,34 Q18,38 23,38 L26,38" stroke="#E6007E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <line x1="10" y1="19" x2="26" y2="19" stroke="#E6007E" stroke-width="5" stroke-linecap="round" />
+    <!-- c -->
+    <path d="M52,18 Q42,10 33,20 Q24,30 35,38 Q45,44 52,36" stroke="#00A3E0" stroke-width="5" stroke-linecap="round" fill="none" />
+    <!-- s -->
+    <path d="M78,18 Q70,10 62,16 Q54,23 70,26 Q86,29 78,38 Q70,46 60,38" stroke="#FF9E1B" stroke-width="5" stroke-linecap="round" fill="none" />
+  </g>
+  <!-- TCS wordmark -->
+  <text x="122" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="24" fill="#1F2A44" letter-spacing="1.5">TCS</text>
+</svg>

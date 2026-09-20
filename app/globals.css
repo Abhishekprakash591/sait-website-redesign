@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SAIT Design System — Obsidian & Champagne Gold
+   ───────────────────────────────────────────────────────────────────────────── */
+:root {
+  --obsidian: #080C14;
+  --surface: #0E131F;
+  --surface-raised: #131929;
+  --gold: #F59E0B;
+  --gold-glow: rgba(245, 158, 11, 0.15);
+  --white: #F8FAFC;
+  --muted: #94A3B8;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  --background: var(--obsidian);
+  --foreground: var(--white);
+  --accent: var(--gold);
+  --border: var(--border-subtle);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #080C14;
+  color: #F8FAFC;
+}
+
+body {
+  margin: 0;
+  background: #080C14;
+  color: #F8FAFC;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #F59E0B;
+  color: #000000;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Component Utilities
+   ───────────────────────────────────────────────────────────────────────────── */
+@layer components {
+  .sait-btn-primary {
+    @apply inline-flex items-center justify-center gap-3 rounded-full bg-[#F59E0B] px-5 py-3 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_10px_25px_rgba(245,158,11,0.3)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F59E0B];
+  }
+
+  .sait-btn-secondary {
+    @apply inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white hover:text-black hover:shadow-[0_8px_20px_rgba(255,255,255,0.1)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+  }
+
+  .sait-card {
+    @apply rounded-2xl border border-white/10 bg-[#0E131F]/90 p-5 shadow-[0_4px_20px_rgba(0,0,0,0.4)] backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-[#131929] md:p-6;
+  }
+
+  .sait-glass-card {
+    @apply rounded-2xl border border-white/10 bg-[#0E131F]/80 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.5)] backdrop-blur-md transition-all duration-300 hover:border-[#F59E0B]/40 hover:shadow-[0_14px_40px_rgba(245,158,11,0.15)];
+  }
+
+  .sait-panel {
+    @apply rounded-3xl border border-white/10 bg-[#0E131F]/90 shadow-[0_8px_30px_rgba(0,0,0,0.5)] backdrop-blur-md;
+  }
+
+  .sait-eyebrow {
+    @apply text-[10px] font-bold uppercase tracking-[0.26em] text-[#F59E0B];
+  }
+
+  .sait-rule {
+    @apply h-px w-12 bg-gradient-to-r from-[#F59E0B] to-transparent;
+  }
+
+  .sait-heading {
+    @apply font-semibold tracking-tight text-white;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Loading Screen — Cream palette override (intentional light-on-dark exception)
+   The intro screen uses a Swiss/cream aesthetic; these rules scope it safely.
+   ───────────────────────────────────────────────────────────────────────────── */
+[aria-label="SAIT Identity Ritual"] {
+  background-color: #F7F3EB !important;
+  color: #1F2A44 !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Dot Field Canvas Container
+   ───────────────────────────────────────────────────────────────────────────── */
+.dot-field-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Scrollbar
+   ───────────────────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #080C14;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F59E0B;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Print
+   ───────────────────────────────────────────────────────────────────────────── */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Reduced Motion
+   ───────────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
