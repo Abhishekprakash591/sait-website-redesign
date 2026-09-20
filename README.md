@@ -12,7 +12,7 @@
 
 <br/>
 
-> A modern, fully animated website for SAIT — the CS/IT student community at CUSAT (Cochin University of Science and Technology). Built with Next.js 16, TypeScript, Tailwind CSS v4, and Framer Motion.
+> A modern, fully animated website for SAIT — IT student community at CUSAT (Cochin University of Science and Technology). Built with Next.js 16, TypeScript, Tailwind CSS v4, and Framer Motion.
 
 <br/>
 
